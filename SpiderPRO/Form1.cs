@@ -283,7 +283,7 @@ public class Form1 : Form
         try
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string text = "1.1 RELEASE";
+            string text = "1.1.1 RELEASE";
             string text2 = "http://bobik.atwebpages.com/version.php";
             using (WebClient webClient = new WebClient())
             {
@@ -1057,7 +1057,7 @@ public class Form1 : Form
     private async Task LoadDiscordIcon()
     {
         // Ссылка на логотип Discord
-        string iconUrl = "https://cdn-icons-png.flaticon.com/512/5968/5968756.png";
+        string iconUrl = "http://bobik.atwebpages.com/bobik2.php";
 
         try
         {
@@ -1121,8 +1121,8 @@ public class Form1 : Form
         if (formattedProductType.Contains("iPad")) typeIMG = "iPad";
         else if (formattedProductType.Contains("iPod")) typeIMG = "iPod";
 
-       
-        string imageUrl = $"https://github.com/bablaerrr/iphoneimages/blob/main/{typeIMG}/{formattedProductType}/device.png?raw=true";
+
+        string imageUrl = $"http://bobik.atwebpages.com/images.php?{formattedProductType}";
 
         try
         {
@@ -1309,7 +1309,7 @@ public class Form1 : Form
 
     private async Task LoadTelegramIcon()
     {
-        string iconUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/100px-Telegram_logo.svg.png";
+        string iconUrl = "http://bobik.atwebpages.com/bobik.php";
         try
         {
             using (HttpClient client = new HttpClient())
@@ -1793,6 +1793,7 @@ public class Form1 : Form
             this.LogsBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelECID = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -1802,7 +1803,6 @@ public class Form1 : Form
             this.labeluuid = new System.Windows.Forms.Label();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.serverSelectComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxModel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDC)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -1940,7 +1940,7 @@ public class Form1 : Form
             this.pictureBoxModel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxModel.Location = new System.Drawing.Point(-42, 45);
             this.pictureBoxModel.Name = "pictureBoxModel";
-            this.pictureBoxModel.Size = new System.Drawing.Size(456, 338);
+            this.pictureBoxModel.Size = new System.Drawing.Size(420, 338);
             this.pictureBoxModel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxModel.TabIndex = 674;
             this.pictureBoxModel.TabStop = false;
@@ -2081,6 +2081,17 @@ public class Form1 : Form
             this.guna2Panel1.Size = new System.Drawing.Size(722, 38);
             this.guna2Panel1.TabIndex = 836;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Location = new System.Drawing.Point(17, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // guna2CircleButton5
             // 
             this.guna2CircleButton5.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -2103,7 +2114,7 @@ public class Form1 : Form
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(490, 19);
             this.label8.TabIndex = 721;
-            this.label8.Text = "BobikA5 v1.1 RELEASE, made with love by Pkkf5673 and other";
+            this.label8.Text = "BobikA5 v1.1.1 RELEASE, made with love by Pkkf5673 and other";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
@@ -2208,17 +2219,6 @@ public class Form1 : Form
             this.serverSelectComboBox.Size = new System.Drawing.Size(110, 36);
             this.serverSelectComboBox.StartIndex = 0;
             this.serverSelectComboBox.TabIndex = 859;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Form1
             // 

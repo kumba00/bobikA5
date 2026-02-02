@@ -13,5 +13,5 @@ using System.Runtime.Versioning;
 [assembly: AssemblyTrademark("BobikA5")]
 [assembly: ComVisible(false)]
 [assembly: Guid("8652cd96-38e9-4f0b-a8ae-d0c5e1af1a7e")]
-[assembly: AssemblyFileVersion("1.0.9")]
-[assembly: AssemblyVersion("1.0.9")]
+[assembly: AssemblyFileVersion("1.1.1")]
+[assembly: AssemblyVersion("1.1.1")]

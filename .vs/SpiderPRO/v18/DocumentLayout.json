@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\bobikk\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\iosdevice2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\iosdevice2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\iosdevice3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\iosdevice3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\nativemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\nativemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\processkilledeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\processkilledeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\processmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\processmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +43,12 @@
       "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\processmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\processmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\devicedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|C:\\bobikk\\spiderpro\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro.helper\\dllhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,26 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\afcfiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\afcfiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\nativemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\nativemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\processkilledeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\processkilledeventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\iosdevice3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\iosdevice3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\iosdevice2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\iosdevice2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|solutionrelative:spiderpro\\win32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B9D8A-B83B-EDB0-4515-3033E5156901}|SpiderPRO.csproj|c:\\bobikk\\spiderpro\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,67 +150,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Form1.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\Form1.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\Form1.cs",
-              "RelativeToolTip": "SpiderPRO\\Form1.cs",
-              "ViewState": "AgIAAAoBAAAAAAAAAAAcwB0BAAAmAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ProcessKilledEventArgs.cs",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\ProcessKilledEventArgs.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\ProcessKilledEventArgs.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\ProcessKilledEventArgs.cs",
+              "RelativeToolTip": "SpiderPRO\\ProcessKilledEventArgs.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:54:56.64Z",
+              "WhenOpened": "2026-01-13T14:07:46.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Form2.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\Form2.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "SpiderPRO\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentIndex": 3,
+              "Title": "NativeMethods.cs",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\NativeMethods.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\NativeMethods.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\NativeMethods.cs",
+              "RelativeToolTip": "SpiderPRO\\NativeMethods.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.118Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SpiderPRO.csproj",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO.csproj",
-              "RelativeDocumentMoniker": "SpiderPRO.csproj",
-              "ToolTip": "C:\\bobikk\\SpiderPRO.csproj",
-              "RelativeToolTip": "SpiderPRO.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-13T14:09:42.39Z"
+              "WhenOpened": "2026-01-13T14:07:46.102Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "iOSDevice3.cs",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\iOSDevice3.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\iOSDevice3.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\iOSDevice3.cs",
+              "RelativeToolTip": "SpiderPRO\\iOSDevice3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T14:07:46.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "iOSDevice2.cs",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\iOSDevice2.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\iOSDevice2.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\iOSDevice2.cs",
+              "RelativeToolTip": "SpiderPRO\\iOSDevice2.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwB4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T14:07:46.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\bobikk\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
               "ToolTip": "C:\\bobikk\\Properties\\AssemblyInfo.cs",
               "RelativeToolTip": "Properties\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:47.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Form1.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\Form1.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "SpiderPRO\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.118Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-01-13T14:07:47.469Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -222,11 +227,86 @@
               "RelativeToolTip": "SpiderPRO\\ProcessMonitor.cs",
               "ViewState": "AgIAAKIAAAAAAAAAAAAuwB0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.102Z"
+              "WhenOpened": "2026-01-13T14:07:46.102Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Program.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\Program.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\Program.cs",
+              "RelativeToolTip": "SpiderPRO\\Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T14:07:46.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Win32.cs",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Win32.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\Win32.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\Win32.cs",
+              "RelativeToolTip": "SpiderPRO\\Win32.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T14:07:46.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Form1.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\Form1.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\Form1.cs",
+              "RelativeToolTip": "SpiderPRO\\Form1.cs",
+              "ViewState": "AgIAAAoBAAAAAAAAAAAwwB0BAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T14:54:56.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Form1.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\Form1.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "SpiderPRO\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T14:07:46.118Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SpiderPRO.csproj",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO.csproj",
+              "RelativeDocumentMoniker": "SpiderPRO.csproj",
+              "ToolTip": "C:\\bobikk\\SpiderPRO.csproj",
+              "RelativeToolTip": "SpiderPRO.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-13T14:09:42.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Form2.cs",
+              "RelativeDocumentMoniker": "SpiderPRO\\Form2.cs",
+              "ToolTip": "C:\\bobikk\\SpiderPRO\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "SpiderPRO\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T14:07:46.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "SpiderPRO",
               "DocumentMoniker": "C:\\bobikk\\SpiderPRO.csproj",
               "RelativeDocumentMoniker": "SpiderPRO.csproj",
@@ -237,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Form2.Designer.cs",
               "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Form2.Designer.cs",
               "RelativeDocumentMoniker": "SpiderPRO\\Form2.Designer.cs",
@@ -249,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "DeviceData.cs",
               "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\DeviceData.cs",
               "RelativeDocumentMoniker": "SpiderPRO\\DeviceData.cs",
@@ -261,19 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Program.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\Program.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\Program.cs",
-              "RelativeToolTip": "SpiderPRO\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "DLLHelper.cs",
               "DocumentMoniker": "C:\\bobikk\\SpiderPRO.Helper\\DLLHelper.cs",
               "RelativeDocumentMoniker": "SpiderPRO.Helper\\DLLHelper.cs",
@@ -285,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Resources.cs",
               "DocumentMoniker": "C:\\bobikk\\SpiderPRO.Properties\\Resources.cs",
               "RelativeDocumentMoniker": "SpiderPRO.Properties\\Resources.cs",
@@ -297,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Dropshadow.cs",
               "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Dropshadow.cs",
               "RelativeDocumentMoniker": "SpiderPRO\\Dropshadow.cs",
@@ -310,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Settings.cs",
               "DocumentMoniker": "C:\\bobikk\\SpiderPRO.Properties\\Settings.cs",
               "RelativeDocumentMoniker": "SpiderPRO.Properties\\Settings.cs",
@@ -322,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "AFCFileType.cs",
               "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\AFCFileType.cs",
               "RelativeDocumentMoniker": "SpiderPRO\\AFCFileType.cs",
@@ -331,66 +399,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-13T14:07:47.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "NativeMethods.cs",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\NativeMethods.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\NativeMethods.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\NativeMethods.cs",
-              "RelativeToolTip": "SpiderPRO\\NativeMethods.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ProcessKilledEventArgs.cs",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\ProcessKilledEventArgs.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\ProcessKilledEventArgs.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\ProcessKilledEventArgs.cs",
-              "RelativeToolTip": "SpiderPRO\\ProcessKilledEventArgs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAABBwAIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "iOSDevice3.cs",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\iOSDevice3.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\iOSDevice3.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\iOSDevice3.cs",
-              "RelativeToolTip": "SpiderPRO\\iOSDevice3.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.03Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "iOSDevice2.cs",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\iOSDevice2.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\iOSDevice2.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\iOSDevice2.cs",
-              "RelativeToolTip": "SpiderPRO\\iOSDevice2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAABBwAIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Win32.cs",
-              "DocumentMoniker": "C:\\bobikk\\SpiderPRO\\Win32.cs",
-              "RelativeDocumentMoniker": "SpiderPRO\\Win32.cs",
-              "ToolTip": "C:\\bobikk\\SpiderPRO\\Win32.cs",
-              "RelativeToolTip": "SpiderPRO\\Win32.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:46.102Z"
             },
             {
               "$type": "Document",
