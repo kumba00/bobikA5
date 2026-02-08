@@ -26,6 +26,7 @@ namespace SpiderPRO;
 
 public class Form1 : Form
 {
+    private Guna2GradientButton guna2GradientButtonCredits; 
 
     private Guna.UI2.WinForms.Guna2ComboBox serverSelectComboBox;
 
@@ -195,6 +196,16 @@ public class Form1 : Form
 		base.Shown += Form1_Shown;
 	}
 
+    private void guna2GradientButtonCredits_Click(object sender, EventArgs e)
+    {
+        // Текст, который будет отображаться в окне
+        string creditsText = "Special thanks to:\n" +
+                             "A5 OSS for backend\n" +
+                             "Smartmaster35rus for 8.4.1 celluar fix\n" +
+                             "Everyone who donated for project\n\n";
+        // Вызов окна в том же стиле, что и после 'Check Device Compatibility'
+        Form2.Show("Credits - BobikA5", creditsText, MessageBoxIcon.Information);
+    }
     private void APP_UUID()
     {
         Guid myuuid = Guid.NewGuid();
@@ -283,7 +294,7 @@ public class Form1 : Form
         try
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string text = "1.1.1 RELEASE";
+            string text = "1.1.2 RELEASE";
             string text2 = "http://bobik.atwebpages.com/version.php";
             using (WebClient webClient = new WebClient())
             {
@@ -757,7 +768,7 @@ public class Form1 : Form
 		deviceDisconnectedAt = DateTime.Now;
 		Invoke((Action)delegate
 		{
-            labelptios.Text = "There is not Device Connected";
+            labelptios.Text = "There is no Device Connected";
             labelimeimeid.Text = "";
             labeludidsn.Text = "";
 			pictureBoxDC.BringToFront();
@@ -1788,6 +1799,7 @@ public class Form1 : Form
             this.labelInfoProgres = new System.Windows.Forms.Label();
             this.Guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.ActivateButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButtonCredits = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label2 = new System.Windows.Forms.Label();
             this.labelIMEI = new System.Windows.Forms.Label();
             this.LogsBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -1924,7 +1936,6 @@ public class Form1 : Form
             // 
             // labelActivaction
             // 
-            this.labelActivaction.AutoSize = true;
             this.labelActivaction.BackColor = System.Drawing.Color.Transparent;
             this.labelActivaction.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.labelActivaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
@@ -1963,9 +1974,9 @@ public class Form1 : Form
             this.labelInfoProgres.BackColor = System.Drawing.Color.Transparent;
             this.labelInfoProgres.Font = new System.Drawing.Font("Segoe UI Semibold", 8.5F, System.Drawing.FontStyle.Bold);
             this.labelInfoProgres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.labelInfoProgres.Location = new System.Drawing.Point(302, 285);
+            this.labelInfoProgres.Location = new System.Drawing.Point(378, 285);
             this.labelInfoProgres.Name = "labelInfoProgres";
-            this.labelInfoProgres.Size = new System.Drawing.Size(355, 18);
+            this.labelInfoProgres.Size = new System.Drawing.Size(313, 26);
             this.labelInfoProgres.TabIndex = 811;
             this.labelInfoProgres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2012,6 +2023,20 @@ public class Form1 : Form
             this.ActivateButton.Text = "Activate Your Device";
             this.ActivateButton.UseTransparentBackground = true;
             this.ActivateButton.Click += new System.EventHandler(this.ActivateButton_Click);
+            // 
+            // guna2GradientButtonCredits
+            // 
+            this.guna2GradientButtonCredits.BorderRadius = 5;
+            this.guna2GradientButtonCredits.FillColor = System.Drawing.Color.DimGray;
+            this.guna2GradientButtonCredits.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2GradientButtonCredits.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButtonCredits.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButtonCredits.Location = new System.Drawing.Point(550, 8);
+            this.guna2GradientButtonCredits.Name = "guna2GradientButtonCredits";
+            this.guna2GradientButtonCredits.Size = new System.Drawing.Size(85, 19);
+            this.guna2GradientButtonCredits.TabIndex = 835;
+            this.guna2GradientButtonCredits.Text = "Credits";
+            this.guna2GradientButtonCredits.Click += new System.EventHandler(this.guna2GradientButtonCredits_Click);
             // 
             // label2
             // 
@@ -2072,6 +2097,7 @@ public class Form1 : Form
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
+            this.guna2Panel1.Controls.Add(this.guna2GradientButtonCredits);
             this.guna2Panel1.Controls.Add(this.pictureBox3);
             this.guna2Panel1.Controls.Add(this.guna2CircleButton5);
             this.guna2Panel1.Controls.Add(this.label8);
@@ -2110,11 +2136,11 @@ public class Form1 : Form
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(141, 8);
+            this.label8.Location = new System.Drawing.Point(84, 8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(490, 19);
             this.label8.TabIndex = 721;
-            this.label8.Text = "BobikA5 v1.1.1 RELEASE, made with love by Pkkf5673 and other";
+            this.label8.Text = "BobikA5 v1.1.2 RELEASE, made with love by Pkkf5673 and other";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
@@ -2136,9 +2162,9 @@ public class Form1 : Form
             this.labeludidsn.BackColor = System.Drawing.Color.Transparent;
             this.labeludidsn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.labeludidsn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.labeludidsn.Location = new System.Drawing.Point(302, 241);
+            this.labeludidsn.Location = new System.Drawing.Point(375, 241);
             this.labeludidsn.Name = "labeludidsn";
-            this.labeludidsn.Size = new System.Drawing.Size(456, 19);
+            this.labeludidsn.Size = new System.Drawing.Size(316, 25);
             this.labeludidsn.TabIndex = 854;
             this.labeludidsn.Text = "UDID - SN";
             this.labeludidsn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2149,9 +2175,9 @@ public class Form1 : Form
             this.labelimeimeid.BackColor = System.Drawing.Color.Transparent;
             this.labelimeimeid.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.labelimeimeid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.labelimeimeid.Location = new System.Drawing.Point(324, 210);
+            this.labelimeimeid.Location = new System.Drawing.Point(378, 212);
             this.labelimeimeid.Name = "labelimeimeid";
-            this.labelimeimeid.Size = new System.Drawing.Size(452, 19);
+            this.labelimeimeid.Size = new System.Drawing.Size(322, 29);
             this.labelimeimeid.TabIndex = 853;
             this.labelimeimeid.Text = "IMEI - MEID";
             this.labelimeimeid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2161,12 +2187,13 @@ public class Form1 : Form
             this.labelptios.BackColor = System.Drawing.Color.Transparent;
             this.labelptios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelptios.ForeColor = System.Drawing.Color.White;
-            this.labelptios.Location = new System.Drawing.Point(328, 170);
+            this.labelptios.Location = new System.Drawing.Point(358, 173);
             this.labelptios.Name = "labelptios";
-            this.labelptios.Size = new System.Drawing.Size(448, 19);
+            this.labelptios.Size = new System.Drawing.Size(321, 19);
             this.labelptios.TabIndex = 855;
             this.labelptios.Text = "There is not Device Connected";
             this.labelptios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelptios.Click += new System.EventHandler(this.labelptios_Click);
             // 
             // labeluuid
             // 
@@ -2307,6 +2334,11 @@ public class Form1 : Form
     }
 
     private void label8_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void labelptios_Click(object sender, EventArgs e)
     {
 
     }
