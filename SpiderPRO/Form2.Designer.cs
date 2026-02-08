@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace SpiderPRO
 {
@@ -142,7 +143,8 @@ namespace SpiderPRO
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // Вместо ошибки вызываем диалоговое окно
+            MessageBox.Show("secret button :D");
         }
 
         #endregion

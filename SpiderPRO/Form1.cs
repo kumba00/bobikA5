@@ -201,7 +201,7 @@ public class Form1 : Form
         // Текст, который будет отображаться в окне
         string creditsText = "Special thanks to:\n" +
                              "A5 OSS for backend\n" +
-                             "Smartmaster35rus for 8.4.1 celluar fix\n" +
+                             "Smartmaster35rus for iOS 8 celluar fix\n" +
                              "Everyone who donated for project\n\n";
         // Вызов окна в том же стиле, что и после 'Check Device Compatibility'
         Form2.Show("Credits - BobikA5", creditsText, MessageBoxIcon.Information);
@@ -294,7 +294,7 @@ public class Form1 : Form
         try
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string text = "1.1.2 RELEASE";
+            string text = "1.1.2 RELEASE 2";
             string text2 = "http://bobik.atwebpages.com/version.php";
             using (WebClient webClient = new WebClient())
             {
@@ -2140,7 +2140,7 @@ public class Form1 : Form
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(490, 19);
             this.label8.TabIndex = 721;
-            this.label8.Text = "BobikA5 v1.1.2 RELEASE, made with love by Pkkf5673 and other";
+            this.label8.Text = "BobikA5 v1.1.2 RELEASE 2, made with love by Pkkf5673 and other";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
