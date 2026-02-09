@@ -20,7 +20,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
-using VMProtect;
 
 namespace SpiderPRO;
 
@@ -148,7 +147,6 @@ public class Form1 : Form
     private Guna2CircleButton guna2CircleButton5;
     private Label label8;
     private Guna2CircleButton guna2CircleButton3;
-    private Label labeludidsn;
     private Label labelimeimeid;
     private Label labelptios;
     private Label labeluuid;
@@ -186,7 +184,6 @@ public class Form1 : Form
 		ActivateButton.Hide();
         labelptios.Text = "There is no device connected in normal mode";
         labelimeimeid.Text = "";
-        labeludidsn.Text = "";
         SetupDragging();
         InitializeDeviceManagers();
 		InitializeFormSettings();
@@ -242,15 +239,6 @@ public class Form1 : Form
                 Form1.SendMessage(base.Handle, 161, 2, 0);
             }
         };
-        this.labeludidsn.MouseDown += delegate (object s, MouseEventArgs e)
-        {
-            bool flag = e.Button == MouseButtons.Left;
-            if (flag)
-            {
-                Form1.ReleaseCapture();
-                Form1.SendMessage(base.Handle, 161, 2, 0);
-            }
-        };
         this.guna2Panel1.MouseDown += delegate (object s, MouseEventArgs e)
         {
             bool flag = e.Button == MouseButtons.Left;
@@ -294,14 +282,42 @@ public class Form1 : Form
         try
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string text = "1.1.2 RELEASE 2";
+            string text = "1.1.3 RELEASE 2";
             string text2 = "http://bobik.atwebpages.com/version.php";
             using (WebClient webClient = new WebClient())
             {
                 string text3 = webClient.DownloadString(text2).Trim();
                 if (!string.Equals(text, text3, StringComparison.OrdinalIgnoreCase))
-                {
-                    Form2.Show("BobikA5", "You're using and outdated Version, get the Last Version of BobikA5 " + text3 + " . Please download and continue. Download link is same", MessageBoxIcon.Exclamation);
+                {// 1. Проверяем на наличие блокировки (HTML-теги или слишком длинный текст)
+                    bool isBlocked = text3.Contains("<!") || text3.Contains("<html") || text3.Length > 100;
+
+                    if (isBlocked)
+                    {
+                        // ОКНО №1: Сообщение о блокировке (только кнопка ОК)
+                        string blockMessage = "Connection Error: Your network provider is blocking the update server.\n\n" +
+                                             "Please use a VPN or different network to access tool, also after entering tool its recommended to use server 4.";
+
+                        MessageBox.Show(blockMessage, "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        // ОКНО №2: Обычное обновление (кнопки Yes/No)
+                        string updateMessage = "You're using an outdated version. Please download the latest version " + text3 + " to continue.";
+                        string title = "Update Required";
+
+                        DialogResult result = MessageBox.Show(updateMessage, title, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                            {
+                                FileName = "https://www.mediafire.com/file/rlkyph9njwyf82t/net48.zip/file",
+                                UseShellExecute = true
+                            });
+                        }
+                    }
+
+                    // В обох случаях закрываем программу
                     Application.Exit();
                     Environment.Exit(0);
                 }
@@ -635,7 +651,6 @@ public class Form1 : Form
 				labelIMEI.Text = lastDeviceIMEI;
 				labelptios.Text = "Device: " + lastDeviceType + " iOS: " + lastDeviceVersion + " Build: " + lastDevicebuildVersion;
                 labelimeimeid.Text = "IMEI: " + lastDeviceIMEI + " SN: " + lastDeviceSN;
-                labeludidsn.Text = "UDID Number: " + lastConnectedUdid;
             }
             else
 			{
@@ -680,7 +695,6 @@ public class Form1 : Form
 
             // 3. Вывод данных на форму (чтобы не пропадали IMEI/SN)
             labelimeimeid.Text = "IMEI: " + lastDeviceIMEI + " SN: " + lastDeviceSN;
-            labeludidsn.Text = "UDID Number: " + (currentUdid ?? lastConnectedUdid);
 
             // 4. ПРОВЕРКА ВЕРСИИ ДЛЯ КНОПКИ
             if (IsSupportedIosVersion(lastDeviceVersion))
@@ -770,7 +784,6 @@ public class Form1 : Form
 		{
             labelptios.Text = "There is no Device Connected";
             labelimeimeid.Text = "";
-            labeludidsn.Text = "";
 			pictureBoxDC.BringToFront();
 			pictureBoxDC.Visible = true;
 			UpdateButtonStates(activateEnabled: false, otaBlockEnabled: false);
@@ -1286,7 +1299,7 @@ public class Form1 : Form
 
             // Используем именно тот файл 'payload', который ты скинул
             // Если ты его переименовал в A5, поправь имя здесь
-            string sourcePath = Path.Combine(winX64Dir, (new[] { "payload", "payload2", "payload3" })[serverSelectComboBox.SelectedIndex]);
+            string sourcePath = Path.Combine(winX64Dir, (new[] { "payload", "payload2", "payload3", "payload4" })[serverSelectComboBox.SelectedIndex]);
 
             if (!File.Exists(sourcePath))
             {
@@ -1809,7 +1822,6 @@ public class Form1 : Form
             this.guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.labeludidsn = new System.Windows.Forms.Label();
             this.labelimeimeid = new System.Windows.Forms.Label();
             this.labelptios = new System.Windows.Forms.Label();
             this.labeluuid = new System.Windows.Forms.Label();
@@ -2140,7 +2152,7 @@ public class Form1 : Form
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(490, 19);
             this.label8.TabIndex = 721;
-            this.label8.Text = "BobikA5 v1.1.2 RELEASE 2, made with love by Pkkf5673 and other";
+            this.label8.Text = "BobikA5 v1.1.3 RELEASE 2, made with love by Pkkf5673 and other";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
@@ -2157,25 +2169,12 @@ public class Form1 : Form
             this.guna2CircleButton3.TabIndex = 6;
             this.guna2CircleButton3.Click += new System.EventHandler(this.guna2CircleButton3_Click);
             // 
-            // labeludidsn
-            // 
-            this.labeludidsn.BackColor = System.Drawing.Color.Transparent;
-            this.labeludidsn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.labeludidsn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.labeludidsn.Location = new System.Drawing.Point(375, 241);
-            this.labeludidsn.Name = "labeludidsn";
-            this.labeludidsn.Size = new System.Drawing.Size(316, 25);
-            this.labeludidsn.TabIndex = 854;
-            this.labeludidsn.Text = "UDID - SN";
-            this.labeludidsn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labeludidsn.Click += new System.EventHandler(this.labeludidsn_Click);
-            // 
             // labelimeimeid
             // 
             this.labelimeimeid.BackColor = System.Drawing.Color.Transparent;
             this.labelimeimeid.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.labelimeimeid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.labelimeimeid.Location = new System.Drawing.Point(378, 212);
+            this.labelimeimeid.Location = new System.Drawing.Point(378, 233);
             this.labelimeimeid.Name = "labelimeimeid";
             this.labelimeimeid.Size = new System.Drawing.Size(322, 29);
             this.labelimeimeid.TabIndex = 853;
@@ -2240,7 +2239,8 @@ public class Form1 : Form
             this.serverSelectComboBox.Items.AddRange(new object[] {
             "Server 1",
             "Server 2",
-            "Server 3"});
+            "Server 3",
+            "Server 4"});
             this.serverSelectComboBox.Location = new System.Drawing.Point(12, 340);
             this.serverSelectComboBox.Name = "serverSelectComboBox";
             this.serverSelectComboBox.Size = new System.Drawing.Size(110, 36);
@@ -2257,7 +2257,6 @@ public class Form1 : Form
             this.Controls.Add(this.guna2GradientButton3);
             this.Controls.Add(this.ActivateButton);
             this.Controls.Add(this.Guna2ProgressBar1);
-            this.Controls.Add(this.labeludidsn);
             this.Controls.Add(this.labelimeimeid);
             this.Controls.Add(this.labelptios);
             this.Controls.Add(this.labeluuid);

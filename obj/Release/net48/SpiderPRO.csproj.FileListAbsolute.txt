@@ -16,4 +16,3 @@ C:\bobikk\obj\Release\net48\SpiderPRO.csproj.CoreCompileInputs.cache
 C:\bobikk\obj\Release\net48\SpiderPRO.csproj.Up2Date
 C:\bobikk\obj\Release\net48\BobikA5.exe
 C:\bobikk\obj\Release\net48\BobikA5.pdb
-C:\bobikk\bin\Release\net48\VMProtect.SDK.dll

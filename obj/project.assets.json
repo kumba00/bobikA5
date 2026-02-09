@@ -34,15 +34,6 @@
         "build": {
           "build/obfuscar.props": {}
         }
-      },
-      "VMProtect.SDK/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net48/VMProtect.SDK.dll": {}
-        },
-        "runtime": {
-          "lib/net48/VMProtect.SDK.dll": {}
-        }
       }
     },
     ".NETFramework,Version=v4.8/win-x86": {
@@ -77,15 +68,6 @@
         "type": "package",
         "build": {
           "build/obfuscar.props": {}
-        }
-      },
-      "VMProtect.SDK/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net48/VMProtect.SDK.dll": {}
-        },
-        "runtime": {
-          "lib/net48/VMProtect.SDK.dll": {}
         }
       }
     }
@@ -302,38 +284,13 @@
         "tools/zh-Hans/System.CommandLine.resources.dll",
         "tools/zh-Hant/System.CommandLine.resources.dll"
       ]
-    },
-    "VMProtect.SDK/1.0.0": {
-      "sha512": "sy339gPQImvFV1LLeLP0vmV3onQzVzMNemTGkFRllq/ceKFyWhSewHs9sErCC1qWV4lJVvoYG4tk/71qqVugWg==",
-      "type": "package",
-      "path": "vmprotect.sdk/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net20/VMProtect.SDK.dll",
-        "lib/net35/VMProtect.SDK.dll",
-        "lib/net40/VMProtect.SDK.dll",
-        "lib/net45/VMProtect.SDK.dll",
-        "lib/net451/VMProtect.SDK.dll",
-        "lib/net452/VMProtect.SDK.dll",
-        "lib/net46/VMProtect.SDK.dll",
-        "lib/net461/VMProtect.SDK.dll",
-        "lib/net462/VMProtect.SDK.dll",
-        "lib/net47/VMProtect.SDK.dll",
-        "lib/net471/VMProtect.SDK.dll",
-        "lib/net472/VMProtect.SDK.dll",
-        "lib/net48/VMProtect.SDK.dll",
-        "vmprotect.sdk.1.0.0.nupkg.sha512",
-        "vmprotect.sdk.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
       "Guna.UI2.WinForms >= 2.0.4.7",
       "Newtonsoft.Json >= 13.0.4",
-      "Obfuscar >= 2.2.50",
-      "VMProtect.SDK >= 1.0.0"
+      "Obfuscar >= 2.2.50"
     ]
   },
   "packageFolders": {
@@ -394,10 +351,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.50, )"
-          },
-          "VMProtect.SDK": {
-            "target": "Package",
-            "version": "[1.0.0, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\RuntimeIdentifierGraph.json"
