@@ -56,7 +56,9 @@ public class Form1 : Form
 
 	private string currentUdid;
 
-	private string currentProductType = "";
+    private Guna.UI2.WinForms.Guna2CheckBox chkDisableReboot;
+
+    private string currentProductType = "";
 
 	private string currentProductVersion = "";
 
@@ -190,8 +192,8 @@ public class Form1 : Form
 		InitializeProcessMonitor();
 		Instance = this;
 		base.FormClosing += Form1_FormClosing;
-		base.Shown += Form1_Shown;
-	}
+        base.Shown += Form1_Shown;
+    }
 
     private void guna2GradientButtonCredits_Click(object sender, EventArgs e)
     {
@@ -282,7 +284,7 @@ public class Form1 : Form
         try
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string text = "1.1.3 RELEASE 2";
+            string text = "1.1.4";
             string text2 = "http://bobik.atwebpages.com/version.php";
             using (WebClient webClient = new WebClient())
             {
@@ -1367,11 +1369,11 @@ public class Form1 : Form
         if ((await RunCommandAsyncReturn(cmd)).Contains("Restarting device"))
         {
             UpdateUIProgress(60, "", "[1] Restarting your device, please wait...");
-            await CountdownAsync(90);
+            await CountdownAsync(300);
             if ((await RunCommandAsyncReturn(cmd)).Contains("Restarting device"))
             {
                 UpdateUIProgress(60, "", "[2] Restarting your device, please wait...");
-                await CountdownAsync(90);
+                await CountdownAsync(300);
                 UpdateUIProgress(80, "", "Checking activation status, please wait...");
                 await IdeviceMobileGestaltAsyncH("hactivation");
             }
@@ -1420,8 +1422,14 @@ public class Form1 : Form
         string diagTool = Path.Combine(winX64Dir, "idevicediagnostics.exe");
 
         // Даем девайсу время прогрузиться после рестарта (A5 долго думает)
-        UpdateUIProgress(70, "", "Waiting for device services (45s)...");
-        await Task.Delay(45000);
+        UpdateUIProgress(70, "", "Waiting for device services...");
+
+        // Динамический таймер на 45 секунд
+        for (int secondsLeft = 45; secondsLeft > 0; secondsLeft--)
+        {
+            UpdateUIProgress(70, "", $"Waiting for device services ({secondsLeft}s)...");
+            await Task.Delay(1000); // Ждем 1 секунду
+        }
 
         // ЦИКЛ ИЗ ПАЙТОНА (5 попыток)
         for (int i = 1; i <= 5; i++)
@@ -1437,10 +1445,21 @@ public class Form1 : Form
                 UpdateUIProgress(100, "", "SUCCESS! Device Activated.");
                 await SendReport("SUCCESSFULLY BYPASSED A5 ✅");
 
-                Form2.Show("BobikA5", "Your Device was Successfully Activated! Rebooting...");
+                // ПРОВЕРКА ГАЛОЧКИ:
+                // Если галочка НЕ стоит (!), выполняем перезагрузку
+                if (!this.chkDisableReboot.Checked)
+                {
+                    Form2.Show("BobikA5", "Your Device was Successfully Activated! Rebooting...");
+                    await Task.Delay(2000);
+                    await RunCommandAsyncReturn($"\"{diagTool}\" restart");
+                }
+                else
+                {
+                    // Если галочка стоит, просто сообщаем об успехе без упоминания ребута
+                    Form2.Show("BobikA5", "Your Device was Successfully Activated!");
+                    UpdateUIProgress(100, "", "SUCCESS! (Reboot skipped)");
+                }
 
-                await Task.Delay(2000);
-                await RunCommandAsyncReturn($"\"{diagTool}\" restart");
                 return;
             }
 
@@ -1827,6 +1846,7 @@ public class Form1 : Form
             this.labeluuid = new System.Windows.Forms.Label();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.serverSelectComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.chkDisableReboot = new Guna.UI2.WinForms.Guna2CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxModel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDC)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -1961,9 +1981,9 @@ public class Form1 : Form
             // 
             this.pictureBoxModel.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxModel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxModel.Location = new System.Drawing.Point(-42, 45);
+            this.pictureBoxModel.Location = new System.Drawing.Point(-62, 41);
             this.pictureBoxModel.Name = "pictureBoxModel";
-            this.pictureBoxModel.Size = new System.Drawing.Size(420, 338);
+            this.pictureBoxModel.Size = new System.Drawing.Size(414, 338);
             this.pictureBoxModel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxModel.TabIndex = 674;
             this.pictureBoxModel.TabStop = false;
@@ -1974,7 +1994,7 @@ public class Form1 : Form
             this.pictureBoxDC.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxDC.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDC.Image")));
-            this.pictureBoxDC.Location = new System.Drawing.Point(-5, 45);
+            this.pictureBoxDC.Location = new System.Drawing.Point(-5, 38);
             this.pictureBoxDC.Name = "pictureBoxDC";
             this.pictureBoxDC.Size = new System.Drawing.Size(284, 338);
             this.pictureBoxDC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2152,7 +2172,7 @@ public class Form1 : Form
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(490, 19);
             this.label8.TabIndex = 721;
-            this.label8.Text = "BobikA5 v1.1.3 RELEASE 2, made with love by Pkkf5673 and other";
+            this.label8.Text = "BobikA5 v1.1.4, made with love by Pkkf5673 and other";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
@@ -2199,9 +2219,9 @@ public class Form1 : Form
             this.labeluuid.BackColor = System.Drawing.Color.Transparent;
             this.labeluuid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.labeluuid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(74)))));
-            this.labeluuid.Location = new System.Drawing.Point(301, 90);
+            this.labeluuid.Location = new System.Drawing.Point(378, 90);
             this.labeluuid.Name = "labeluuid";
-            this.labeluuid.Size = new System.Drawing.Size(452, 19);
+            this.labeluuid.Size = new System.Drawing.Size(327, 19);
             this.labeluuid.TabIndex = 856;
             this.labeluuid.Text = "APP UUID: ";
             this.labeluuid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2247,12 +2267,30 @@ public class Form1 : Form
             this.serverSelectComboBox.StartIndex = 0;
             this.serverSelectComboBox.TabIndex = 859;
             // 
+            // chkDisableReboot
+            // 
+            this.chkDisableReboot.AutoSize = true;
+            this.chkDisableReboot.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkDisableReboot.CheckedState.BorderRadius = 0;
+            this.chkDisableReboot.CheckedState.BorderThickness = 0;
+            this.chkDisableReboot.ForeColor = System.Drawing.Color.White;
+            this.chkDisableReboot.Location = new System.Drawing.Point(147, 347);
+            this.chkDisableReboot.Name = "chkDisableReboot";
+            this.chkDisableReboot.Size = new System.Drawing.Size(167, 17);
+            this.chkDisableReboot.TabIndex = 0;
+            this.chkDisableReboot.Text = "Disable reboot after activation";
+            this.chkDisableReboot.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkDisableReboot.UncheckedState.BorderRadius = 0;
+            this.chkDisableReboot.UncheckedState.BorderThickness = 0;
+            this.chkDisableReboot.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(717, 405);
+            this.Controls.Add(this.chkDisableReboot);
             this.Controls.Add(this.serverSelectComboBox);
             this.Controls.Add(this.guna2GradientButton3);
             this.Controls.Add(this.ActivateButton);
