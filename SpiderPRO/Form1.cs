@@ -1369,11 +1369,11 @@ public class Form1 : Form
         if ((await RunCommandAsyncReturn(cmd)).Contains("Restarting device"))
         {
             UpdateUIProgress(60, "", "[1] Restarting your device, please wait...");
-            await CountdownAsync(300);
+            await CountdownAsync(90);
             if ((await RunCommandAsyncReturn(cmd)).Contains("Restarting device"))
             {
                 UpdateUIProgress(60, "", "[2] Restarting your device, please wait...");
-                await CountdownAsync(300);
+                await CountdownAsync(90);
                 UpdateUIProgress(80, "", "Checking activation status, please wait...");
                 await IdeviceMobileGestaltAsyncH("hactivation");
             }
