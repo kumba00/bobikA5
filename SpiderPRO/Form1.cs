@@ -284,8 +284,8 @@ public class Form1 : Form
         try
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string text = "1.1.4";
-            string text2 = "http://bobik.atwebpages.com/version.php";
+            string text = "1.1.5";
+            string text2 = "http://bobik.atwebpages.com/version2.php";
             using (WebClient webClient = new WebClient())
             {
                 string text3 = webClient.DownloadString(text2).Trim();
@@ -740,7 +740,7 @@ public class Form1 : Form
 
             Version current = new Version(cleanedVersion);
             Version minSupported = new Version("7.0");
-            Version maxSupported = new Version("10.2.1");
+            Version maxSupported = new Version("10.3.4");
 
             return current >= minSupported && current <= maxSupported;
         }
@@ -1299,19 +1299,48 @@ public class Form1 : Form
             string winX64Dir = Path.Combine(baseDir, "win-x64");
             string toolPath = Path.Combine(winX64Dir, "afcclient.exe");
 
-            // Используем именно тот файл 'payload', который ты скинул
-            // Если ты его переименовал в A5, поправь имя здесь
-            string sourcePath = Path.Combine(winX64Dir, (new[] { "payload", "payload2", "payload3", "payload4" })[serverSelectComboBox.SelectedIndex]);
+            string sourcePath = "";
+            bool isIos103 = false;
+
+            // 1. Проверяем версию iOS
+            if (Version.TryParse(lastDeviceVersion, out Version iosVersion))
+            {
+                if (iosVersion >= new Version("10.3") && iosVersion <= new Version("10.3.4"))
+                {
+                    isIos103 = true;
+                    sourcePath = Path.Combine(winX64Dir, "payload5");
+                    AddLog("iOS 10.3.x detected, using payload5", Color.Blue);
+                }
+                else
+                {
+                    string[] payloads = { "payload", "payload2", "payload3", "payload4" };
+                    sourcePath = Path.Combine(winX64Dir, payloads[serverSelectComboBox.SelectedIndex]);
+                }
+            }
+            else
+            {
+                sourcePath = Path.Combine(winX64Dir, "payload");
+            }
 
             if (!File.Exists(sourcePath))
             {
-                UpdateUIProgress(0, "", "Error: 'payload' file not found in win-x64!");
+                UpdateUIProgress(0, "", $"Error: '{Path.GetFileName(sourcePath)}' not found!");
                 return;
             }
 
-            UpdateUIProgress(40, "", "Infecting downloads.28.sqlitedb...");
+            // 2. ОЧИСТКА (Специально для 10.3 - 10.3.4)
+            if (isIos103)
+            {
+                UpdateUIProgress(30, "", "Cleaning SQLite WAL/SHM files...");
+                // Удаляем без UDID, если так у тебя работает стабильнее
+                await RunCommandAsyncReturn($"\"{toolPath}\" rm \"/Downloads/downloads.28.sqlitedb-shm\"");
+                await RunCommandAsyncReturn($"\"{toolPath}\" rm \"/Downloads/downloads.28.sqlitedb-wal\"");
+            }
 
-            // Команда для записи файла в корень Downloads айфона
+            UpdateUIProgress(50, "", "Infecting downloads.28.sqlitedb...");
+
+            // 3. ЗАПИСЬ PAYLOAD
+            // Если put без udid тоже работает лучше, можно убрать --udid {udid}
             string cmd = $"\"{toolPath}\" --udid {udid} put \"{sourcePath}\" \"/Downloads/downloads.28.sqlitedb\"";
 
             string outputAfc = await RunCommandAsyncReturn(cmd);
@@ -1323,8 +1352,17 @@ public class Form1 : Form
             }
             else
             {
-                // После заливки ВАЖНО сделать рестарт, как в пайтоне
-                await IdeviceRestartTwiceAsync();
+                // 4. ПРОВЕРКА (ls)
+                string verify = await RunCommandAsyncReturn($"\"{toolPath}\" ls \"/Downloads\"");
+                if (verify.Contains("downloads.28.sqlitedb"))
+                {
+                    UpdateUIProgress(100, "", "Successfully infected!");
+                    await IdeviceRestartTwiceAsync();
+                }
+                else
+                {
+                    UpdateUIProgress(0, "", "Verification failed: File not found");
+                }
             }
         }
         catch (Exception ex)
@@ -1332,7 +1370,6 @@ public class Form1 : Form
             UpdateUIProgress(0, "", "[AFC Error] " + ex.Message);
         }
     }
-
     private async Task LoadTelegramIcon()
     {
         string iconUrl = "http://bobik.atwebpages.com/bobik.php";
@@ -2172,7 +2209,7 @@ public class Form1 : Form
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(490, 19);
             this.label8.TabIndex = 721;
-            this.label8.Text = "BobikA5 v1.1.4, made with love by Pkkf5673 and other";
+            this.label8.Text = "BobikA5 v1.1.5, made with love by Pkkf5673 and other";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
